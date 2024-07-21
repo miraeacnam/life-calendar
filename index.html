@@ -10,17 +10,20 @@
             flex-direction: column;
             align-items: center;
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
         }
         #calendar {
-            display: flex;
-            flex-wrap: wrap;
-            width: 52 * 20px; /* Adjust size if needed */
+            display: grid;
+            grid-template-columns: repeat(52, 16px);
+            gap: 2px;
+            margin-top: 20px;
         }
         .week {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             border: 1px solid #ccc;
-            margin: -1px 0 0 -1px;
             box-sizing: border-box;
         }
         .week.before-60 {
@@ -31,6 +34,9 @@
         }
         .week.current {
             background-color: red;
+        }
+        label, input, button {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -71,3 +77,4 @@
     </script>
 </body>
 </html>
+
